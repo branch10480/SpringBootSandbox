@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <p th:text="${msg}"></p>
+    <form action="/form/detail" method="post">
+        <div class="input-group">
+            <input type="checkbox" name="check1" id="check1">
+            <label for="check1">チェック</label>
+        </div>
+        <div class="input-group">
+            <input type="radio" name="radio1" value="male" id="male">
+            <label for="male">男性</label>
+        </div>
+        <div class="input-group">
+            <input type="radio" name="radio1" value="female" id="female">
+            <label for="female">女性</label>
+        </div>
+        <div class="input-group">
+            <select name="select1">
+                <option value="iOS">iOS</option>
+                <option value="Android">Android</option>
+                <option value="Windows">Windows</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <select name="select2" multiple="multiple">
+                <option value="iOS">iOS</option>
+                <option value="Android">Android</option>
+                <option value="Windows">Windows</option>
+            </select>
+        </div>
+        <input type="submit" value="Click">
+    </form>
+</body>
+
+</html>
