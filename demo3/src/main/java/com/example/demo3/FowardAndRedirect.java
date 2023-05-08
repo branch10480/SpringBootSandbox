@@ -2,6 +2,7 @@ package com.example.demo3;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -40,6 +41,13 @@ public class FowardAndRedirect {
         String[] list = new String[] {"Apple", "Orange", "Lemon"};
         mav.setViewName("recursive");
         mav.addObject("list", list);
+        return mav;
+    }
+    
+    @GetMapping("/switchcase/{num}")
+    public ModelAndView switchcase(ModelAndView mav, @PathVariable String num) {
+        mav.setViewName("switchcase");
+        mav.addObject("id", num);
         return mav;
     }
     
